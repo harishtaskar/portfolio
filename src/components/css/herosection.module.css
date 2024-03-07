@@ -1,0 +1,117 @@
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 40px);
+    height: calc(100vh - 160px);
+    margin-top: 80px;
+    padding: 160px 20px;
+}
+
+.hero-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.hero-details{
+
+}
+
+.text-details{
+    max-width: 640px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px
+}
+
+.hero-title{
+    color: var(--text-color);
+    line-height: 68px;
+    letter-spacing: 0.5px;
+    font-size: 62px;
+    font-weight: 600;
+    animation: drop-in 1200ms ease 500ms forwards;
+}
+
+.hero-subtitle{
+    color: var(--text-color-2);
+    font-size: 22px;
+    font-weight: 600;
+    animation: drop-in 1200ms ease 500ms forwards;
+}
+
+
+
+.buttons{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    animation: drop-in 1200ms ease 500ms forwards;
+    
+}
+
+.btn-email{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: var(--secondary);
+    border: none;
+    outline: none;
+    padding: 20px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-copy{
+    /* height: 58px; */
+    border: 1px solid var(--secondary);
+    outline: none;
+    background-color: transparent;
+    border-radius: 4px;
+    padding: 5px;
+    color: var(--text-color);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.copied-icon{
+    color: var(--success);
+    animation: copy-animation 300ms ease-in-out;
+}
+
+.hero-image{
+    border-radius: 50%;
+    animation: drop-in 1200ms ease 500ms forwards;
+}
+
+@keyframes drop-in {
+    from {
+     opacity: 0;
+     transform: translateY(100px);
+    }
+    to {
+     opacity: 1;
+     transform: translate(0px);
+    }
+   }
+
+@keyframes copy-animation {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+

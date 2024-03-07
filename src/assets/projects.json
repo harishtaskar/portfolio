@@ -1,0 +1,21 @@
+[
+  {
+    "name": "Modennest",
+    "thumbnail": "/src/assets/images/product.jpg",
+    "github": [
+      "https://github.com/harishtaskar/modernnest",
+      "https://github.com/harishtaskar/modernnest-admin"
+    ],
+    "website": ["Modennest.vercel.app", "Modennest-admin.vercel.app"],
+    "description": "ModernNest is your premier destination for contemporary furniture that elevates both style and comfort in your living space. At ModernNest, we curate a carefully selected collection of modern furniture pieces that embody sleek design, quality craftsmanship, and functionality.",
+    "tech": ["Mongodb", "React"]
+  },
+  {
+    "name": "Promptopia",
+    "thumbnail": "/src/assets/images/product.jpg",
+    "github": ["https://github.com/harishtaskar/Promptopia"],
+    "website": ["https://promptopia.vercel.app"],
+    "description": "ModernNest is your premier destination for contemporary furniture that elevates both style and comfort in your living space. At ModernNest, we curate a carefully selected collection of modern furniture pieces that embody sleek design, quality craftsmanship, and functionality.",
+    "tech": ["Mongodb", "Next Js"]
+  }
+]

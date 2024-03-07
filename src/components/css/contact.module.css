@@ -1,0 +1,94 @@
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    font-size: 80px;
+    margin: 140px 0px;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 500px;
+}
+
+.heading{
+    color: var(--text-color);
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.description{
+    text-align: center;
+    color: var(--text-color-2);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.email-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    background-color: var(--secondary);
+    border: none;
+    outline: none;
+    padding: 15px 45px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+}
+
+.social-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 80px;
+    color: var(--text-color-2)
+}
+
+.social-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.linkedin{
+    font-size: 40px;
+    transition: 0.5s;
+}
+.linkedin:hover{
+    color: #0077b5
+}
+.twitter{
+    font-size: 40px;
+    transition: 0.5s;
+}
+.twitter:hover{
+    color: var(--white)
+}
+.mail{
+    font-size: 40px;
+    transition: 0.5s;
+}
+.mail:hover{
+    color: #ff4343
+}
+.whatsapp{
+    font-size: 40px;
+    transition: 0.5s;
+}
+.whatsapp:hover{
+    color: #25d366;
+}
