@@ -5,6 +5,7 @@
     align-items: center;
     flex-direction: column;
     gap: 45px;
+    padding-top: 100px;
 }
 
 .heading{
@@ -18,11 +19,14 @@
 
 .project{
     width: 100%;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     box-shadow: inset 0px 0px 0px 1px var(--secondary);
     cursor: pointer;
+    animation: drop-in 1200ms ease 500ms forwards;
 }
 
 .thumbnail{
@@ -32,6 +36,7 @@
 }
 
 .details{
+    width: 100%;
     flex: 1;
     display: flex;
     flex-direction: column; 
@@ -55,7 +60,10 @@
 }
 
 .technologies-div{
+    margin-top: 10px;
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 .technologies{
@@ -71,11 +79,31 @@
     flex-direction: column;
 }
 
-
-
 .link{
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: var(--white);
     line-height: 20px;
     font-size: 16px;
+    white-space: unset;
 }
 
+@keyframes drop-in {
+    from {
+     opacity: 0;
+     transform: translateY(100px);
+    }
+    to {
+     opacity: 1;
+     transform: translate(0px);
+    }
+   }
+
+
+   @media (max-width: 800px) {
+        .details{
+            margin: 15px;
+        }
+   }

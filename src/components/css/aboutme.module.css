@@ -1,3 +1,14 @@
+.about{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 45px;
+    min-height: calc(100vh - 300px);
+    padding-top: 100px;
+}
+
 .heading{
     color: var(--secondary);
     width: fit-content;
@@ -5,4 +16,117 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title{
+    text-transform: uppercase;
+    font-size: calc(14px + 0.5vw);
+    font-weight: 700;
+    animation: drop-in 1200ms ease 500ms forwards;
+}
+
+.about-me{
+    max-width: 800px;
+    text-align: center;
+    color: var(--text-color);
+    letter-spacing: 0.5px;
+    line-height: 26px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 10px;
+    animation: drop-in 1200ms ease 500ms forwards;
+    
+}
+
+.paragraph{
+    max-width: 600px;
+    text-align: center;
+    color: var(--text-color-2);
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    animation: drop-in 1200ms ease 500ms forwards;
+}
+
+.bold{
+    color: var(--text-color);
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    font-size: 17px;
+    font-weight: 600;
+    
+}   
+
+.skills{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-flow: wrap;
+    
+}
+
+.skill{
+    display: flex;
+    align-items: center;
+    /* box-shadow: inset 0px 0px 0px 1px var(--secondary);
+    border-radius: 0px; */
+    padding: 20px;
+    cursor: pointer;
+    mix-blend-mode: lighten;
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    animation: drop-in 1200ms ease 500ms forwards;
+}
+
+
+.skill:hover{
+    mix-blend-mode: unset;
+}
+
+.skill-name{
+    display: none;
+}
+
+.skill-name:hover{
+    display: block;
+}
+
+@keyframes drop-in {
+    from {
+     opacity: 0;
+     transform: translateY(100px);
+    }
+    to {
+     opacity: 1;
+     transform: translate(0px);
+    }
+   }
+
+
+@media (max-width: 800px) {
+    .paragraph{
+        font-size: 14px;
+    }
+    .bold{
+        font-size: 15px;
+    }
 }

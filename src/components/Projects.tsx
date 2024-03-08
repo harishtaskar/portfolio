@@ -21,10 +21,10 @@ type Props = {
 
 const Projects = ({ projects }: Props) => {
   return (
-    <section className={classes.projects}>
+    <section className={classes.projects} id="projects">
       <div className={classes.heading}>
         <i className="ri-arrow-down-line" />
-        <Heading text={"Featured Work"} />
+        <Heading text={"Featured Work"} id="projects" />
       </div>
       {projects?.map((project: IProject, index: number) => {
         return (
@@ -35,8 +35,8 @@ const Projects = ({ projects }: Props) => {
             <Image
               className={classes["thumbnail"]}
               src={index === 0 ? image : image2}
-              width={400}
-              height={400}
+              width={200}
+              height={200}
               alt="project-thumbnail"
               objectFit="cover"
             />

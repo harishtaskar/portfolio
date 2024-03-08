@@ -4,10 +4,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  max-height: 100vh;
-  margin: 0px 80px;
+  min-height: 100vh;
+  padding: 0px 80px;
   overflow-y: scroll;
-  position: relative;
+  border-bottom: 1px solid #434343;
+  scroll-behavior: smooth;
+  /* position: relative; */
 }
 
 .main::-webkit-scrollbar{
@@ -20,5 +22,11 @@
   height: 20px;
   border-radius: 50%;
   position: absolute;
+}
+
+@media (max-width: 800px) {
+    .main{
+      padding: 0px 26px;
+    }
 }
 

@@ -8,7 +8,7 @@ type Props = {};
 
 const HeroSection = (props: Props) => {
   return (
-    <section className={classes.hero}>
+    <section className={classes.hero} id="home">
       <div className={classes["hero-content"]}>
         <div className={classes["hero-details"]}>
           <div className={classes["text-details"]}>
@@ -30,10 +30,14 @@ const HeroSection = (props: Props) => {
         <div>
           <Image
             src={profile}
-            width={400}
-            height={400}
+            width={500}
+            height={500}
             alt="profile"
             className={classes["hero-image"]}
+            objectFit="cover"
+            quality={80}
+            style={{ minHeight: "200px", minWidth: "200px" }}
+            placeholder="blur"
           />
         </div>
       </div>

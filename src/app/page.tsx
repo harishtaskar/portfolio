@@ -8,12 +8,14 @@ import AboutMe from "@/components/AboutMe";
 
 export default function Home() {
   return (
-    <main className={`${styles.main}`}>
-      <HeroSection />
-      <AboutMe />
-      <Projects projects={projects} />
-      <Contact />
+    <div className={styles.body}>
+      <main className={`${styles.main}`}>
+        <HeroSection />
+        <AboutMe />
+        <Projects projects={projects} />
+        <Contact />
+      </main>
       <Credits />
-    </main>
+    </div>
   );
 }

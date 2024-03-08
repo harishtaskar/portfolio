@@ -5,7 +5,7 @@ type Props = {};
 
 const Contact = ({}: Props) => {
   return (
-    <section className={classes.contact}>
+    <section className={classes.contact} id="contact">
       <div className={classes["content"]}>
         <span className={classes["heading"]}>Contact Me</span>
         <p className={classes["description"]}>
