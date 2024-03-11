@@ -75,7 +75,7 @@ const AboutMe = ({}: Props) => {
         <div className={classes["container"]} data-aos="fade-up">
           <p className={classes["title"]}>Skill Set</p>
           <div className={classes["skills"]}>
-            {skills?.map((skill) => {
+            {skills?.map((skill, index) => {
               return (
                 <div
                   className={classes["skill"]}
@@ -84,6 +84,7 @@ const AboutMe = ({}: Props) => {
                   data-tooltip-content={skill.name}
                   data-tooltip-place="bottom"
                   data-aos="fade-up"
+                  key={index}
                 >
                   <Image
                     width={50}

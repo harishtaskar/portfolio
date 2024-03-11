@@ -36,6 +36,7 @@ const Projects = ({ projects }: Props) => {
           <div
             className={classes["project"]}
             style={index % 2 !== 0 ? { flexDirection: "row-reverse" } : {}}
+            key={index}
           >
             <Image
               className={classes["thumbnail"]}
@@ -60,9 +61,9 @@ const Projects = ({ projects }: Props) => {
               </div>
               <span className={classes["project-description"]}> Github </span>
               <div className={classes["links"]}>
-                {project?.github?.map((item: string) => {
+                {project?.github?.map((item: string, index: number) => {
                   return (
-                    <Link className={classes.link} href={item}>
+                    <Link className={classes.link} href={item} key={index}>
                       {item}
                       <i className="ri-arrow-right-up-line" />
                     </Link>
@@ -71,9 +72,9 @@ const Projects = ({ projects }: Props) => {
               </div>
               <span className={classes["project-description"]}> Website </span>
               <div className={classes["links"]}>
-                {project?.website?.map((item: string) => {
+                {project?.website?.map((item: string, index: number) => {
                   return (
-                    <Link className={classes.link} href={item}>
+                    <Link className={classes.link} href={item} key={index}>
                       {item}
                       <i className="ri-arrow-right-up-line" />
                     </Link>
