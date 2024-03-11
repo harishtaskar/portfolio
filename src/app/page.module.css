@@ -10,6 +10,7 @@
   border-bottom: 1px solid #434343;
   scroll-behavior: smooth;
   /* position: relative; */
+  overflow-anchor: none;
 }
 
 .main::-webkit-scrollbar{

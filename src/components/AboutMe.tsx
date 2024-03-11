@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Heading from "./Heading";
 import classes from "./css/aboutme.module.css";
 import react from "@/assets/brands/react.svg";
@@ -13,6 +14,8 @@ import html from "@/assets/brands/html.png";
 import css from "@/assets/brands/css.png";
 import nodejs from "@/assets/brands/nodejs.png";
 import Image from "next/image";
+import AOS from "aos";
+import { useScramble } from "use-scramble";
 
 type Props = {};
 
@@ -31,21 +34,30 @@ const skills = [
 ];
 
 const AboutMe = ({}: Props) => {
+  useEffect(() => {
+    AOS.init({ duration: 500 });
+  }, []);
+
+  const { ref, replay } = useScramble({
+    text: "Education",
+  });
+
   return (
     <section className={classes["about"]} id="about">
       <div className={classes.heading}>
         <i className="ri-arrow-down-line" />
         <Heading text={"About Me"} id="about" />
       </div>
-      <p className={classes["about-me"]}>
+      <p className={classes["about-me"]} data-aos="fade-up">
+        {" "}
         I am a passionate software developer with a primary interest in
         developing applications using React JS, with a total experience of more
         than 1 years in software development, I have gained expertise in
-        creating multiple consumer products and projects.
+        creating multiple consumer products and projects.{" "}
       </p>
       <div className={classes["content"]}>
-        <div className={classes["container"]}>
-          <p className={classes["title"]}>Education</p>
+        <div className={classes["container"]} data-aos="fade-up">
+          <p className={classes["title"]} ref={ref} onClick={replay} />
           <p className={classes["paragraph"]}>
             <span className={classes["bold"]}>
               Bachelor of Computer Applications
@@ -53,14 +65,14 @@ const AboutMe = ({}: Props) => {
             (BCA) degree from Veer Narmad South Gujarat University in 2023.
           </p>
         </div>
-        <div className={classes["container"]}>
+        <div className={classes["container"]} data-aos="fade-up">
           <p className={classes["title"]}>work experience</p>
           <p className={classes["paragraph"]}>
             <span className={classes["bold"]}>Bluesort Infotech</span> junior
             Web Developer from july 2023 to present.
           </p>
         </div>
-        <div className={classes["container"]}>
+        <div className={classes["container"]} data-aos="fade-up">
           <p className={classes["title"]}>Skill Set</p>
           <div className={classes["skills"]}>
             {skills?.map((skill) => {
@@ -71,6 +83,7 @@ const AboutMe = ({}: Props) => {
                   data-tooltip-class-name="tooltip"
                   data-tooltip-content={skill.name}
                   data-tooltip-place="bottom"
+                  data-aos="fade-up"
                 >
                   <Image
                     width={50}

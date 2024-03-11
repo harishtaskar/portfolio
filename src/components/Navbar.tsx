@@ -23,7 +23,7 @@ const Navbar = (props: Props) => {
                 alt="logo"
                 className={classes.logo}
               />
-              <span className={classes["nav-title"]}>Harish Taskar</span>
+              <span className={classes["nav-title"]}>harishtaskar.dev</span>
             </div>
             <ul className={classes["nav-links"]}>
               <li className={classes["nav-link"]}>
@@ -38,7 +38,7 @@ const Navbar = (props: Props) => {
               </li>
               <li className={classes["nav-link"]}>
                 <Link href={"#projects"} className={classes["link"]}>
-                  Projetcs
+                  Projects
                 </Link>
               </li>
               <li className={classes["nav-link"]}>

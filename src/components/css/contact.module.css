@@ -33,27 +33,63 @@
     animation: drop-in 1200ms ease 500ms forwards;
 }
 
-.email-btn{
+.form{
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.input{
+    width: calc(100% - 30px);
+    padding: 12px 15px;
+    background: transparent;
+    border: none;
+    box-shadow: inset 0px 0px 0px 1px var(--secondary);
+    resize: none;
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: var(--text-color);
+    outline: none;
+    font-family: sans-serif;
+}
+
+
+.input:focus,
+.input:active{
+    border: none;
+    box-shadow: inset 0px 0px 0px 2px var(--white);
+    border-radius: 0px;
+}
+
+.email-btn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
     background-color: var(--secondary);
     border: none;
     outline: none;
     padding: 15px 45px;
-    border-radius: 4px;
+    /* border-radius: 4px; */
     font-size: 16px;
     font-weight: 500;
     color: white;
     cursor: pointer;
-    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    animation: drop-in 1200ms ease 500ms forwards;
+    transition: all 0.2s cubic-bezier(0.65, 0, 0.076, 1);
+    /* animation: drop-in 1200ms ease 500ms forwards; */
 }
 
 .email-btn:hover{
     box-shadow: inset 0px 0px 0px 1px var(--secondary);
-    background-color: transparent; 
+    background-color: var(--white); 
+    color: var(--black);
   }
 
 .social-links{
@@ -102,6 +138,13 @@
 }
 .whatsapp:hover{
     color: #25d366;
+}
+.github{
+    font-size: 40px;
+    transition: 0.5s;
+}
+.github:hover{
+    color: var(--white);
 }
 
 

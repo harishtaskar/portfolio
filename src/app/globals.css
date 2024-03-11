@@ -43,5 +43,12 @@ ul{
     padding-inline-start: 0px;
 }
 
+input:-webkit-autofill{
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: var(--text-color);
+}
+
+
+
 
 
