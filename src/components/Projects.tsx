@@ -54,8 +54,8 @@ const Projects = ({ projects }: Props) => {
               <div className={classes["technologies-div"]}>
                 <span className={classes.description}> Technologies :</span>
                 <div className={classes["technologies"]}>
-                  {project?.tech?.map((item: string) => {
-                    return <div>{item}</div>;
+                  {project?.tech?.map((item: string, index: number) => {
+                    return <div key={index}>{item}</div>;
                   })}
                 </div>
               </div>
