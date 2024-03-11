@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import Heading from "./Heading";
 import classes from "./css/aboutme.module.css";
 import react from "@/assets/brands/react.svg";
-import javascript from "@/assets/brands/JavaScript.png";
+import javascript from "@/assets/brands/javascript.png";
 import mongodb from "@/assets/brands/mongodb.png";
 import next from "@/assets/brands/next.svg";
 import recoil from "@/assets/brands/recoil.svg";
