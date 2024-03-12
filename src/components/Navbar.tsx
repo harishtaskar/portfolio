@@ -4,6 +4,7 @@ import classes from "./css/navbar.module.css";
 import Image from "next/image";
 import weblogo from "@/assets/images/weblogo.svg";
 import Link from "next/link";
+import ThemeButton from "./ThemeButton";
 
 type Props = {};
 
@@ -104,15 +105,18 @@ const Navbar = (props: Props) => {
               </Link>
             </li>
           </ul>
-          <div className={classes["mobile-nav-logo"]}>
-            <Image
-              src={weblogo}
-              width={500}
-              height={100}
-              alt="logo"
-              className={classes.logo}
-            />
-            <span className={classes["nav-title"]}>Harish Taskar</span>
+          <div className={classes["mobile-nav-bottom"]}>
+            <div className={classes["mobile-nav-logo"]}>
+              <Image
+                src={weblogo}
+                width={500}
+                height={100}
+                alt="logo"
+                className={classes.logo}
+              />
+              <span className={classes["nav-title"]}>Harish Taskar</span>
+            </div>
+            {/* <ThemeButton /> */}
           </div>
         </div>
       )}

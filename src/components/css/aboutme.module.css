@@ -125,8 +125,13 @@
 @media (max-width: 800px) {
     .paragraph{
         font-size: 14px;
+        font-weight: 400
     }
     .bold{
         font-size: 15px;
+        font-weight: 500;
+    }
+    .about-me{
+        font-weight: 400;
     }
 }

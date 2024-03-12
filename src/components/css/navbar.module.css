@@ -1,6 +1,6 @@
 .navbar{
     width: calc(100% - 160px);
-    background-color: #323232e0;
+    background-color: var(--navbar);
     backdrop-filter: blur(4px);
     padding: 22.5px 80px;
     position: fixed;
@@ -18,12 +18,14 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
-}
-
-
-.logo{
+    color: var(--text-color);
+  }
+  
+  
+  .logo{
     width: 40px;
     height: 35px;
+    color: var(--text-color);
 }
 
 .nav-title{
@@ -48,7 +50,7 @@
 }
 
 .link{
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
     display: inline-block;
     position: relative;
@@ -64,10 +66,11 @@
     height: 2px;
     left: 50%;
     position: absolute;
-    background: #fff;
+    background: var(--text-color);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
   }
+
   .link:hover:after { 
     width: 100%; 
     left: 0; 
@@ -87,7 +90,7 @@
     width: 100%;
     height: 100vh;
     position: fixed;
-    background-color: rgba(26, 26, 26, 0.838);
+    background-color: var(--mobile-nav-background);
     z-index: 999;
     backdrop-filter: blur(4px);
     display: flex;
@@ -108,12 +111,35 @@
     padding: 30px 0px;
   }
 
+  .mobile-nav-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 80px;
+  }
+
+  .btn-theme{
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: none;
+    color: var(--secondary);
+    cursor: pointer;
+    transition: all 1000ms ease;
+  }
+
+  .btn-theme:hover,
+  .btn-theme:active{
+    color: var(--white);
+  }
+
   .mobile-nav-logo{
     flex: 2;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+   
 }
 
   .mobile-nav-link{
@@ -143,5 +169,6 @@
       .nav-links{
         display: none;
       }
+   
   }
 

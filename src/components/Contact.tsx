@@ -7,6 +7,8 @@ import React, {
 } from "react";
 import classes from "./css/contact.module.css";
 import AOS from "aos";
+import { useScramble } from "use-scramble";
+import Link from "next/link";
 
 type Props = {};
 
@@ -14,6 +16,14 @@ const Contact = ({}: Props) => {
   const [data, setData] = useState({
     email: "",
     message: "",
+  });
+
+  const { ref, replay } = useScramble({
+    text: "Contact Me",
+    playOnMount: true,
+    speed: 0.2,
+    overflow: false,
+    overdrive: false,
   });
 
   const onChange = useCallback((event: any) => {
@@ -37,7 +47,12 @@ const Contact = ({}: Props) => {
   return (
     <section className={classes.contact} id="contact">
       <div className={classes["content"]} data-aos="fade-up">
-        <span className={classes["heading"]}>Contact Me</span>
+        <span
+          className={classes["heading"]}
+          ref={ref}
+          onLoad={replay}
+          onClick={replay}
+        />
         <p className={classes["description"]} data-aos="fade-up">
           If you are looking to hire a web developer, I’m currently available
           for fulltime remote role.
@@ -72,21 +87,27 @@ const Contact = ({}: Props) => {
           </button>
         </form>
         <div className={classes["social-links"]} data-aos="fade-up">
-          <div className={classes["social-link"]}>
+          <Link
+            href="https://www.linkedin.com/in/harishtaskar-innovator/"
+            className={classes["social-link"]}
+          >
             <i className={`${classes["linkedin"]} ri-linkedin-fill`} />
-          </div>
-          <div className={classes["social-link"]}>
+          </Link>
+          <Link href="/" className={classes["social-link"]}>
             <i className={`${classes["twitter"]} ri-twitter-x-line`} />
-          </div>
-          <div className={classes["social-link"]}>
+          </Link>
+          <Link href="/" className={classes["social-link"]}>
             <i className={`${classes["mail"]} ri-mail-line`} />
-          </div>
-          <div className={classes["social-link"]}>
+          </Link>
+          <Link href="/" className={classes["social-link"]}>
             <i className={`${classes["whatsapp"]} ri-whatsapp-line`} />
-          </div>
-          <div className={classes["social-link"]}>
+          </Link>
+          <Link
+            href="https://github.com/harishtaskar"
+            className={classes["social-link"]}
+          >
             <i className={`${classes["github"]} ri-github-line`} />
-          </div>
+          </Link>
         </div>
       </div>
     </section>

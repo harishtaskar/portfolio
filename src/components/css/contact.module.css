@@ -97,7 +97,7 @@
     align-items: center;
     justify-content: center;
     gap: 40px;
-    margin-top: 80px;
+    margin: 60px 0px;
     color: var(--text-color-2)
 }
 
@@ -109,6 +109,8 @@
     height: 60px;
     cursor: pointer;
     animation: drop-in 1200ms ease 500ms forwards;
+    color: var(--text-color-2);
+    text-decoration: none;
 }
 
 .linkedin{
@@ -161,10 +163,13 @@
 
    @media (max-width: 800px) {
         .contact{
-            margin: 80px 0px;
+            margin: 120px 0px;
         }
         .social-link{
             width: 30px;
             height: 30px;
+        }
+        .description{
+            font-weight: 400;
         }
    }

@@ -9,7 +9,9 @@
   --text-color: #DEDEDE;
   
   --text-color-2: #959595;
-  background-color: var(--background);
+  --navbar: #323232e0;
+  --mobile-nav-background: #1a1a1ae7;
+  
   color: var(--text-color);
   scroll-behavior: smooth;
   transition: all 10s ease-in-out;
@@ -21,6 +23,7 @@
 }
 
 body{
+  background-color: var(--background);
   margin: 0px;
   user-select: none;
   -webkit-tap-highlight-color: transparent;

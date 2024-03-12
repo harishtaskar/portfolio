@@ -1,12 +1,13 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useCallback, useEffect } from "react";
 import classes from "./css/herosection.module.css";
 import Image from "next/image";
-import profile from "@/assets/images/profile.jpg";
+import profile from "@/assets/images/profile2.jpg";
 import CopyButton from "./CopyButton";
 import AOS from "aos";
 import { useScramble } from "use-scramble";
-import Link from "next/link";
+import { saveAs } from "file-saver";
+import ThemeButton from "./ThemeButton";
 
 type Props = {};
 
@@ -23,9 +24,18 @@ const HeroSection = ({}: Props) => {
     overdrive: false,
   });
 
+  const downloadHandler = useCallback(() => {
+    saveAs(
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fnature%2F&psig=AOvVaw072nGorDtmswh6GGJNew7V&ust=1710307305644000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCLiWp6z97YQDFQAAAAAdAAAAABAE"
+    );
+  }, []);
+
   return (
     <section className={classes.hero} id="home" data-aos="fade-up">
       <div className={classes["hero-content"]}>
+        {/* <div className={classes["theme"]}>
+          <ThemeButton />
+        </div> */}
         <div className={classes["hero-details"]}>
           <div className={classes["text-details"]}>
             <p className={classes["hero-title"]} ref={ref} onClick={replay} />
@@ -39,7 +49,7 @@ const HeroSection = ({}: Props) => {
               harishtaskar001@gmail.com
               <CopyButton />
             </div>
-            <button className={classes["btn-email"]}>
+            <button className={classes["btn-email"]} onClick={downloadHandler}>
               Resume
               <i className="ri-download-line ri-xl" />
             </button>
