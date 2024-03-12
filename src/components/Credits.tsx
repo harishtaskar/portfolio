@@ -14,12 +14,12 @@ const Credits = ({}: Props) => {
         </Link>{" "}
         - Copyright 2024
       </span>
-      <span className={classes.text}>
+      {/* <span className={classes.text}>
         Design by{" "}
         <Link href={"/"} className={classes.name}>
           Viraj Aher
         </Link>
-      </span>
+      </span> */}
     </section>
   );
 };

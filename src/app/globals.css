@@ -51,6 +51,41 @@ input:-webkit-autofill{
   -webkit-text-fill-color: var(--text-color);
 }
 
+.loading {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border: 3px solid var(--text-color);
+}
+.loading{
+  box-sizing: border-box;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #ffffff00;
+  border-radius: 50%;
+  animation: loading 800ms cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #000000 #000000 #4b4b4b59 #4b4b4b59;
+}
+.loading div:nth-child(1) {
+  animation-delay: -0.25s;
+}
+.loading div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.loading div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 
 
 

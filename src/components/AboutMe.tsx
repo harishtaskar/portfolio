@@ -65,6 +65,8 @@ const AboutMe = ({}: Props) => {
             (BCA) degree from Veer Narmad South Gujarat University in 2023.
           </p>
         </div>
+      </div>
+      <div className={classes["content"]}>
         <div className={classes["container"]} data-aos="fade-up">
           <p className={classes["title"]}>work experience</p>
           <p className={classes["paragraph"]}>
@@ -72,6 +74,8 @@ const AboutMe = ({}: Props) => {
             Web Developer from july 2023 to present.
           </p>
         </div>
+      </div>
+      <div className={classes["content"]}>
         <div className={classes["container"]} data-aos="fade-up">
           <p className={classes["title"]}>Skill Set</p>
           <div className={classes["skills"]}>

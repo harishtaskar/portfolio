@@ -2,7 +2,7 @@
 import React, { useCallback, useEffect } from "react";
 import classes from "./css/herosection.module.css";
 import Image from "next/image";
-import profile from "@/assets/images/profile2.jpg";
+import profile from "@/assets/images/profileimage.jpg";
 import CopyButton from "./CopyButton";
 import AOS from "aos";
 import { useScramble } from "use-scramble";

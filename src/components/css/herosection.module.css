@@ -155,12 +155,13 @@
     .buttons{
         /* flex-direction: column; */
         align-items: center;
-        gap: 10px;
+        gap: 8px;
     }
     .btn-email{
-        line-height: 24px;
+        padding: 12px;
+        line-height: 26px;
         font-size: 12px;
-        padding: 14px;
+        gap: 6px;
     }
     .theme{
         display: none;

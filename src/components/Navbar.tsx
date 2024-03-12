@@ -17,13 +17,14 @@ const Navbar = (props: Props) => {
         <div className={classes.navbar}>
           <div className={classes["nav-content"]}>
             <div className={classes["nav-logo"]}>
-              <Image
+              {/* <Image
                 src={weblogo}
                 width={500}
                 height={100}
                 alt="logo"
                 className={classes.logo}
-              />
+              /> */}
+              <i className={`${classes['logo']} ri-donut-chart-fill ri-2x`}/>
               <span className={classes["nav-title"]}>harishtaskar.dev</span>
             </div>
             <ul className={classes["nav-links"]}>

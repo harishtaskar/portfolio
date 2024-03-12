@@ -2,7 +2,7 @@
     width: calc(100% - 160px);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 80px;
     padding: 0px 80px;
 }
