@@ -103,6 +103,10 @@
 
 
    @media (max-width: 800px) {
+        .projects{
+            padding-top: 65px;
+            gap: 25px;
+        }
         .details{
             margin: 0px;
         }

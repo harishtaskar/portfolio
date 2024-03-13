@@ -165,7 +165,7 @@
 
    @media (max-width: 800px) {
         .contact{
-            margin: 120px 0px;
+            margin: 100px 0px;
         }
         .social-link{
             width: 30px;
@@ -173,5 +173,8 @@
         }
         .description{
             font-weight: 400;
+        }
+        .social-links{
+            margin: 20px 0px;
         }
    }

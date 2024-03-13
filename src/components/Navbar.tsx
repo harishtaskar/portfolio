@@ -24,7 +24,7 @@ const Navbar = (props: Props) => {
                 alt="logo"
                 className={classes.logo}
               /> */}
-              <i className={`${classes['logo']} ri-donut-chart-fill ri-2x`}/>
+              <i className={`${classes["logo"]} ri-donut-chart-fill ri-2x`} />
               <span className={classes["nav-title"]}>harishtaskar.dev</span>
             </div>
             <ul className={classes["nav-links"]}>
@@ -108,14 +108,15 @@ const Navbar = (props: Props) => {
           </ul>
           <div className={classes["mobile-nav-bottom"]}>
             <div className={classes["mobile-nav-logo"]}>
-              <Image
+              {/* <Image
                 src={weblogo}
                 width={500}
                 height={100}
                 alt="logo"
                 className={classes.logo}
-              />
-              <span className={classes["nav-title"]}>Harish Taskar</span>
+              /> */}
+              <i className={`${classes["logo"]} ri-donut-chart-fill ri-2x`} />
+              <span className={classes["nav-title"]}>harishtaskar.dev</span>
             </div>
             {/* <ThemeButton /> */}
           </div>

@@ -123,6 +123,9 @@
 
 
 @media (max-width: 800px) {
+    .about{
+        padding-top: 65px;
+    }
     .paragraph{
         font-size: 14px;
         font-weight: 400
@@ -133,5 +136,6 @@
     }
     .about-me{
         font-weight: 400;
+        gap: 25px;
     }
 }

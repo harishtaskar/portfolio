@@ -90,6 +90,15 @@ const Contact = ({}: Props) => {
     [email, message]
   );
 
+  let flag = true;
+
+  const adjustScroll = useCallback(() => {
+    if (flag) {
+      window.scrollTo({ top: 5, behavior: "smooth" });
+      flag = false;
+    }
+  }, []);
+
   useEffect(() => {
     AOS.init({ duration: 800 });
   }, []);
@@ -136,12 +145,14 @@ const Contact = ({}: Props) => {
           className={classes["form"]}
         >
           <input
+            id={"from_email"}
             name={"from_email"}
             type={"email"}
             placeholder={"Email"}
             className={classes["input"]}
             onChange={onEmailChange}
             value={email}
+            onFocus={adjustScroll}
           />
           <textarea
             name="message"
@@ -151,6 +162,7 @@ const Contact = ({}: Props) => {
             className={classes["input"]}
             onChange={onMessageChange}
             value={message}
+            onFocus={adjustScroll}
           />
           <button
             type={"submit"}

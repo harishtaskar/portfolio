@@ -139,6 +139,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
    
 }
 
@@ -160,7 +161,7 @@
 
     .navbar{
         width: calc(100% - 52px);
-        padding: 16px 26px;
+        padding: 14px 26px;
     }
 
       .mobile-nav-btn{
@@ -169,6 +170,16 @@
       .nav-links{
         display: none;
       }
+      .nav-logo{
+        gap: 6px;
+        font-size: 0.8em;
+      }
+    .nav-title{
+        line-height: 22px;
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--text-color);
+    }
    
   }
 

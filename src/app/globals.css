@@ -15,7 +15,7 @@
   color: var(--text-color);
   scroll-behavior: smooth;
   transition: all 10s ease-in-out;
-  
+  position: relative;
 }
 
 :root::-webkit-scrollbar{
