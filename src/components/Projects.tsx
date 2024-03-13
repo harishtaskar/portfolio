@@ -4,8 +4,9 @@ import classes from "./css/projects.module.css";
 import Heading from "./Heading";
 import Image from "next/image";
 import Link from "next/link";
-import image from "../assets/images/product.jpg";
-import image2 from "../assets/images/product2.jpg";
+import modernnest from "../assets/images/modernnest.png";
+import promptopia from "../assets/images/promptopia.png";
+import tornittos from "../assets/images/tornittos.png";
 import AOS from "aos";
 
 interface IProject {
@@ -32,6 +33,7 @@ const Projects = ({ projects }: Props) => {
         <Heading text={"Featured Work"} id="projects" />
       </div>
       {projects?.map((project: IProject, index: number) => {
+        const image = project.thumbnail;
         return (
           <div
             className={classes["project"]}
@@ -40,19 +42,21 @@ const Projects = ({ projects }: Props) => {
           >
             <Image
               className={classes["thumbnail"]}
-              src={index === 0 ? image : image2}
+              src={project.thumbnail}
               width={400}
               height={400}
               alt="project-thumbnail"
               objectFit="cover"
             />
+          
+
             <div className={classes["details"]} data-aos="zoom-out">
               <span className={classes["project-name"]}>{project.name}</span>
               <p className={classes["project-description"]}>
                 {project.description}
               </p>
               <div className={classes["technologies-div"]}>
-                <span className={classes.description}> Technologies :</span>
+                <span className={classes.description}> Technologies</span>:
                 <div className={classes["technologies"]}>
                   {project?.tech?.map((item: string, index: number) => {
                     return <div key={index}>{item}</div>;

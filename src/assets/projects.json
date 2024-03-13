@@ -1,21 +1,30 @@
 [
   {
     "name": "Modern Nest",
-    "thumbnail": "/src/assets/images/product.jpg",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/modernnest-5fe3d.appspot.com/o/portfolio%2Fmodernnest.png?alt=media&token=40d8dcbe-1477-4ddc-962b-638cf3c3c7e4",
     "github": [
       "https://github.com/harishtaskar/modernnest",
-      "https://github.com/harishtaskar/modernnest-admin"
+      "https://github.com/harishtaskar/modernnest-admin",
+      "https://github.com/harishtaskar/modernnest-backend"
     ],
     "website": ["Modennest.vercel.app", "Modennest-admin.vercel.app"],
     "description": "ModernNest is your premier destination for contemporary furniture that elevates both style and comfort in your living space. At ModernNest, we curate a carefully selected collection of modern furniture pieces that embody sleek design, quality craftsmanship, and functionality.",
-    "tech": ["Mongodb", "React"]
+    "tech": ["Next Js", "React", "Mongodb", "Firebase"]
   },
   {
-    "name": "Promptopia",
-    "thumbnail": "/src/assets/images/product.jpg",
+    "name": "http://surl.li/rnbtf",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/modernnest-5fe3d.appspot.com/o/portfolio%2Fpromptopia.png?alt=media&token=4eb3e786-665f-4910-89a0-9998c0e37a6a",
     "github": ["https://github.com/harishtaskar/Promptopia"],
-    "website": ["https://promptopia.vercel.app"],
-    "description": "ModernNest is your premier destination for contemporary furniture that elevates both style and comfort in your living space. At ModernNest, we curate a carefully selected collection of modern furniture pieces that embody sleek design, quality craftsmanship, and functionality.",
-    "tech": ["Mongodb", "Next Js"]
+    "website": ["https://thepromptopia.vercel.app"],
+    "description": "Promptopia is your premier destination for quality prompts by experts and prompts engineers that allows users get unique prompts and add their own prompts.",
+    "tech": ["Next Js", "Next Auth", "Mongodb", "Tailwind CSS"]
+  },
+  {
+    "name": "Tornittos Pizza (Frontend)",
+    "thumbnail": "https://firebasestorage.googleapis.com/v0/b/modernnest-5fe3d.appspot.com/o/portfolio%2Ftornittos.png?alt=media&token=c3e28608-7d27-44bb-925f-b84a979d4696",
+    "github": ["https://github.com/harishtaskar/tornittos"],
+    "website": ["https://tornittos.vercel.app"],
+    "description": "Tornittos pizza is a local pizza outlet which serves vast varities of pizza, and provides dine in facalities.",
+    "tech": ["Next Js", "Next Auth", "Tailwind CSS", "Daisy UI"]
   }
 ]

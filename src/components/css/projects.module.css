@@ -62,13 +62,14 @@
 .technologies-div{
     margin-top: 10px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;      
     justify-content: center;
     gap: 10px;
 }
 .technologies{
-    display: flex;        
-    gap: 10px
+    display: flex;  
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .links{

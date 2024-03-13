@@ -23,6 +23,7 @@
     "react-toastify": "^10.0.4",
     "react-tooltip": "^5.26.3",
     "remixicon": "^4.2.0",
+    "sharp": "^0.33.2",
     "use-scramble": "^2.2.15"
   },
   "devDependencies": {

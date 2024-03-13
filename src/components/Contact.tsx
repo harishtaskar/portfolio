@@ -93,7 +93,7 @@ const Contact = ({}: Props) => {
   let flag = true;
 
   const adjustScroll = useCallback(() => {
-    if (flag) {
+    if (flag && window.screen.width < 800) {
       window.scrollTo({ top: 5, behavior: "smooth" });
       flag = false;
     }
