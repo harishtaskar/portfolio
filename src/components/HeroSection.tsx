@@ -7,7 +7,7 @@ import CopyButton from "./CopyButton";
 import AOS from "aos";
 import { useScramble } from "use-scramble";
 import { saveAs } from "file-saver";
-import ThemeButton from "./ThemeButton";
+import Link from "next/link";
 
 type Props = {};
 
@@ -26,7 +26,8 @@ const HeroSection = ({}: Props) => {
 
   const downloadHandler = useCallback(() => {
     saveAs(
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fnature%2F&psig=AOvVaw072nGorDtmswh6GGJNew7V&ust=1710307305644000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCLiWp6z97YQDFQAAAAAdAAAAABAE"
+      "https://firebasestorage.googleapis.com/v0/b/modernnest-5fe3d.appspot.com/o/portfolio%2FResume(Harish).pdf?alt=media&token=58b496ad-621d-4df3-8355-f3fc27d54783",
+      "resume(harish).pdf"
     );
   }, []);
 
@@ -49,10 +50,15 @@ const HeroSection = ({}: Props) => {
               harishtaskar001@gmail.com
               <CopyButton />
             </div>
-            <button className={classes["btn-email"]} onClick={downloadHandler}>
+            <Link
+              href={"#"}
+              download={true}
+              className={classes["btn-email"]}
+              onClick={downloadHandler}
+            >
               Resume
               <i className="ri-download-line ri-xl" />
-            </button>
+            </Link>
           </div>
         </div>
         <div>

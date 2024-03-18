@@ -24,7 +24,8 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    box-shadow: inset 0px 0px 0px 1px var(--secondary);
+    /* box-shadow: inset 0px 0px 0px 1px var(--secondary); */
+    border: 1px solid var(--secondary);
     cursor: pointer;
     animation: drop-in 1200ms ease 500ms forwards;
 }

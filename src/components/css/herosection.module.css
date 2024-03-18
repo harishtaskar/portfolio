@@ -69,11 +69,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-decoration: none;
     gap: 10px;
     background-color: var(--secondary);
     border: none;
     outline: none;
-    line-height: 24px;
+    line-height: 26px;
     padding: 20px 20px;
     border-radius: 4px;
     font-size: 16px;
