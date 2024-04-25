@@ -5,6 +5,9 @@ import Link from "next/link";
 type Props = {};
 
 const Credits = ({}: Props) => {
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
     <section className={classes.credits}>
       <span className={classes.text}>
@@ -12,7 +15,7 @@ const Credits = ({}: Props) => {
         <Link href={"/"} className={classes.name}>
           Harish Taskar
         </Link>{" "}
-        - Copyright 2024
+        - Copyright {year}
       </span>
       {/* <span className={classes.text}>
         Design by{" "}

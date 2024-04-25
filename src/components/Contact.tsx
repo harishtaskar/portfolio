@@ -3,6 +3,7 @@ import React, {
   ChangeEventHandler,
   useCallback,
   useEffect,
+  useMemo,
   useState,
 } from "react";
 import classes from "./css/contact.module.css";
@@ -38,18 +39,20 @@ const Contact = ({}: Props) => {
 
   const onEmailChange = useCallback((event: any) => {
     const { value } = event.target;
-    if (validateEmail(value)) {
-      setEmail(value);
-    } else {
-      setEmail("");
-    }
+    setEmail(value);
   }, []);
 
-  console.log(email);
   const onMessageChange = useCallback((event: any) => {
     const { value } = event.target;
     setMessage(value);
   }, []);
+
+  const validateInputs = useMemo(() => {
+    if (message?.length > 0 && validateEmail(email) !== null) {
+      return true;
+    }
+    return false;
+  }, [email, message]);
 
   const onSubmit = useCallback(
     (event: React.FormEvent<HTMLFormElement>) => {
@@ -60,8 +63,6 @@ const Contact = ({}: Props) => {
         user_id: process.env.NEXT_PUBLIC_USER_ID,
         template_params: { from_email: email, message },
       };
-
-      console.log(body);
 
       const sendMail = async () => {
         try {
@@ -82,7 +83,6 @@ const Contact = ({}: Props) => {
         } catch (error) {
           toast.error("Something went wrong");
           setBtnLoading(false);
-          console.log(error);
         }
       };
       sendMail();
@@ -102,6 +102,7 @@ const Contact = ({}: Props) => {
   useEffect(() => {
     AOS.init({ duration: 800 });
   }, []);
+
   return (
     <section className={classes.contact} id="contact">
       <div className={classes["content"]} data-aos="fade-up">
@@ -167,10 +168,10 @@ const Contact = ({}: Props) => {
           <button
             type={"submit"}
             style={
-              email?.length > 0 && message?.length > 0 ? {} : { opacity: 0.6 }
+              validateInputs ? {} : { opacity: 0.6, cursor: "not-allowed" }
             }
             className={classes["email-btn"]}
-            disabled={email?.length > 0 && message?.length > 0 ? false : true}
+            disabled={!validateInputs}
           >
             {btnLoading ? (
               <a className="loading" />

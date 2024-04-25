@@ -48,9 +48,8 @@ const Projects = ({ projects }: Props) => {
               alt="project-thumbnail"
               objectFit="cover"
             />
-          
 
-            <div className={classes["details"]} data-aos="zoom-out">
+            <div className={classes["details"]}>
               <span className={classes["project-name"]}>{project.name}</span>
               <p className={classes["project-description"]}>
                 {project.description}
