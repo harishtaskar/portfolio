@@ -27,9 +27,9 @@
 
 .description{
     text-align: center;
-    color: var(--text-color-2);
+    color: var(--text-color-1);
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     animation: drop-in 1200ms ease 500ms forwards;
 }
 

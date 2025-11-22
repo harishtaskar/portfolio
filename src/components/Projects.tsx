@@ -41,7 +41,7 @@ const Projects = ({ projects }: Props) => {
             key={index}
           >
             <Image
-              className={classes["thumbnail"]}
+              className={`${classes["thumbnail"]} ${index % 2 !== 0 ? classes["right-radius"] : classes["left-radius"]}`}
               src={project.thumbnail}
               width={400}
               height={400}

@@ -26,6 +26,7 @@
     flex-wrap: wrap;
     /* box-shadow: inset 0px 0px 0px 1px var(--secondary); */
     border: 1px solid var(--secondary);
+    border-radius: 10px;
     cursor: pointer;
     animation: drop-in 1200ms ease 500ms forwards;
 }
@@ -34,6 +35,16 @@
     width: 100%;
     flex: 1;
     object-fit: cover;
+}
+
+.right-radius {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.left-radius {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .details{

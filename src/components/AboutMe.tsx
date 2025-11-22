@@ -33,7 +33,7 @@ const skills = [
   { name: "Mongodb", thumb: mongodb },
 ];
 
-const AboutMe = ({}: Props) => {
+const AboutMe = ({ }: Props) => {
   useEffect(() => {
     AOS.init({ duration: 500 });
   }, []);
@@ -50,10 +50,10 @@ const AboutMe = ({}: Props) => {
       </div>
       <p className={classes["about-me"]} data-aos="fade-up">
         {" "}
-        I am a passionate software developer with a primary interest in
-        developing applications using React JS, with a total experience of more
-        than 1 years in software development, I have gained expertise in
-        creating multiple consumer products and projects.{" "}
+        I am a dedicated software developer with over 2.5 years of hands-on experience
+        in building modern web applications, primarily using ReactJS. Throughout my journey,
+        I have developed and contributed to multiple consumer-focused products and projects,
+        gaining strong expertise in crafting efficient, scalable, and user-centric solutions.{" "}
       </p>
       <div className={classes["content"]}>
         <div className={classes["container"]} data-aos="fade-up">
@@ -70,8 +70,12 @@ const AboutMe = ({}: Props) => {
         <div className={classes["container"]} data-aos="fade-up">
           <p className={classes["title"]}>work experience</p>
           <p className={classes["paragraph"]}>
-            <span className={classes["bold"]}>Bluesort Infotech</span> junior
-            Web Developer from july 2023 to present.
+            <span className={classes["bold"]}>Bluesort Infotech</span>
+            {" "}Frontend Developer from july 2023 to 2025.
+          </p>
+          <p className={classes["paragraph"]}>
+            <span className={classes["bold"]}>Dignizant Technologies LLP</span>
+            {" "} Web Developer from july 2025 to present.
           </p>
         </div>
       </div>
